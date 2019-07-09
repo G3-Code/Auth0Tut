@@ -12,8 +12,9 @@ window.setState = changes => {
   ReactDOM.render(<App {...state} />, document.getElementById("root"));
 };
 
+const userName = auth.getProfile().name || "G3";
 let initialState = {
-  name: "Gayathri",
+  name: userName,
   location: window.location.pathname.replace(/^\/?|\/$/g, ""),
   auth
 };
