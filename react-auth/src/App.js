@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Main from "./components/Main";
 import Secret from "./components/Secret";
+import NotFound from "./components/NotFound";
 
 class App extends React.Component {
   render() {
@@ -19,7 +20,7 @@ class App extends React.Component {
         break;
 
       default:
-        mainComponent = <Main />;
+        mainComponent = <NotFound />;
     }
     return (
       <div className="App">
