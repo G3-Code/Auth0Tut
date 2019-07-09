@@ -4,7 +4,7 @@ export default class Main extends React.Component {
   render() {
     return (
       <div>
-        <p>This is a testing space for Main.</p>
+        <p>Hello, {this.props.name}.This is a testing space for Main.</p>
       </div>
     );
   }
