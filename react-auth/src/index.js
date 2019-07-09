@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import Auth from "./Auth";
+
+const auth = new Auth();
 let state = {};
 window.setState = changes => {
   state = Object.assign({}, state, changes);
@@ -11,7 +14,8 @@ window.setState = changes => {
 
 let initialState = {
   name: "Gayathri",
-  location: window.location.pathname.replace(/^\/?|\/$/g, "")
+  location: window.location.pathname.replace(/^\/?|\/$/g, ""),
+  auth
 };
 
 window.setState(initialState);
