@@ -45,4 +45,11 @@ export default class Auth {
     console.log(`:: EXPIRES AT IS AUTHENTICATED IS :: ${expiresAt}`);
     return new Date().getTime() < expiresAt;
   }
+
+  logout() {
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("id_token");
+    localStorage.removeItem("expires_at");
+    window.location.pathname = LOGIN_FAILURE_PAGE;
+  }
 }

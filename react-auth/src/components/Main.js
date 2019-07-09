@@ -8,12 +8,14 @@ export default class Main extends React.Component {
         <p>
           Do you want to visit the secret area? <a href="/secret">Click here</a>
         </p>
-        <div>
-          <hr />
-          Please login first!
-          <hr />
-          <button onClick={this.props.auth.login}>Login</button>
-        </div>
+        {!this.props.auth.isAuthenticated() && (
+          <div>
+            <hr />
+            Please login first!
+            <hr />
+            <button onClick={this.props.auth.login}>Login</button>
+          </div>
+        )}
       </div>
     );
   }

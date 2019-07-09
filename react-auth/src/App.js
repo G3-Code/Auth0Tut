@@ -20,7 +20,7 @@ class App extends React.Component {
         break;
       case "secret":
         mainComponent = this.props.auth.isAuthenticated() ? (
-          <Secret />
+          <Secret {...this.props} />
         ) : (
           <NotFound />
         );
